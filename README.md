@@ -40,7 +40,7 @@ The documentation is available at this URL: http://wit.istc.cnr.it/arco/lode/ext
 ## License
 This project is licensed under the Creative Commons License - see the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) site for details.
 
-## Acknowledgments
+## Authors
 
 * Andrea Giovanni Nuzzolese
 * Alessandro Russo
