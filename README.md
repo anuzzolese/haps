@@ -19,7 +19,7 @@ The .omn format is specific for annotating the entities, which compose the ontol
 You can request the ontology in all the formats mentioned above, including Manchester Syntax, by running this command:
 
 ```
-curl -L -X GET -H “Accept: <MIME_type>/<MIME_subtype>” https://w3id.org/haps/ont
+curl -L -X GET -H "Accept: <MIME_type>/<MIME_subtype>" https://w3id.org/haps/ont
 ```
 
 where <MIME_type>/<MIME_subtype> can be:
@@ -38,7 +38,7 @@ where <MIME_type>/<MIME_subtype> can be:
 The documentation is available at this URL: http://wit.istc.cnr.it/arco/lode/extract?lang=en&url=https://raw.githubusercontent.com/anuzzolese/haps/master/ont/haps.rdf.
 
 ## License
-This project is licensed under the Creative Commons License - see the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) site for details.
+This project is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## Authors
 
