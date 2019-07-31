@@ -2,12 +2,31 @@
 <rdf:RDF xmlns="https://w3id.og/haps/ont/"
      xml:base="https://w3id.og/haps/ont/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf-schema="http://www.w3.og/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="https://w3id.og/haps/ont"/>
+    <owl:Ontology rdf:about="https://w3id.og/haps/ont">
+        <dc:description rdf:resource="https://raw.githubusercontent.com/anuzzolese/haps/master/ont/haps.png"/>
+        <dc:creator>Alessandro Russo</dc:creator>
+        <dc:description xml:lang="it">L&apos;ontologia degli attacchi e delle vulnerabilità su HTTP.</dc:description>
+        <rdfs:label xml:lang="en">HAPS ontology</rdfs:label>
+        <dc:creator>Valentina Presutti</dc:creator>
+        <dc:title xml:lang="en">HAPS ontology</dc:title>
+        <dc:description xml:lang="en">The ontology of attacks and vulnerability over HTTP.</dc:description>
+        <dc:creator>Andrea Giovanni Nuzzolese</dc:creator>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <dc:creator>Davide Montanari</dc:creator>
+        <terms:issued xml:lang="en">2019-08-31</terms:issued>
+        <rdfs:label xml:lang="it">Ontologia HAPS</rdfs:label>
+        <dc:title xml:lang="it">Ontologia HAPS</dc:title>
+        <terms:modified>2019-08-31</terms:modified>
+        <rdfs:comment xml:lang="en">The ontology of attacks and vulnerability over HTTP.</rdfs:comment>
+        <rdfs:comment xml:lang="it">L&apos;ontologia degli attacchi e delle vulnerabilità su HTTP</rdfs:comment>
+    </owl:Ontology>
     
 
 
@@ -19,6 +38,42 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 
@@ -102,9 +157,9 @@
     <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/hasAttacker">
         <rdfs:domain rdf:resource="https://w3id.og/haps/ont/Attack"/>
         <rdfs:range rdf:resource="https://w3id.og/haps/ont/Attacker"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
         <rdfs:comment xml:lang="it">La relazione che associa un attacco con l&apos;agente che effettua l&apos;attacco (attaccante).</rdfs:comment>
         <rdfs:comment xml:lang="en">The relation that associates an attack with the agent who performs the attack (i.e. attacker).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
         <rdfs:label xml:lang="it">ha attaccante</rdfs:label>
         <rdfs:label xml:lang="en">has attacker</rdfs:label>
     </owl:ObjectProperty>
@@ -147,9 +202,9 @@
         <owl:inverseOf rdf:resource="https://w3id.og/haps/ont/isWebApplicationOf"/>
         <rdfs:domain rdf:resource="https://w3id.og/haps/ont/WebServer"/>
         <rdfs:range rdf:resource="https://w3id.og/haps/ont/WebApplication"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
         <rdfs:comment xml:lang="it">La proprietà che associa un server web ad una delle sue applicaizoni web.</rdfs:comment>
         <rdfs:comment xml:lang="en">The property that associates a web server to a one of its web applications.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
         <rdfs:label xml:lang="it">ha applicazione web</rdfs:label>
         <rdfs:label xml:lang="en">has web application</rdfs:label>
     </owl:ObjectProperty>
@@ -176,9 +231,9 @@
         <owl:inverseOf rdf:resource="https://w3id.og/haps/ont/makes"/>
         <rdfs:domain rdf:resource="https://w3id.og/haps/ont/RequestClassificationResult"/>
         <rdfs:range rdf:resource="https://w3id.og/haps/ont/Agent"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
         <rdfs:comment xml:lang="it">La proprietà che associa un&apos;instanza di classificazione di richiesta HTTP all&apos;agente che effettua la classificazione.</rdfs:comment>
         <rdfs:comment xml:lang="en">The propriety that associates a request classification instance to an agent performing the request.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
         <rdfs:label xml:lang="en">is made by</rdfs:label>
         <rdfs:label xml:lang="it">è fatta da</rdfs:label>
     </owl:ObjectProperty>
