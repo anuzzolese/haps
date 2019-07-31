@@ -1,0 +1,900 @@
+[ {
+  "@id" : "http://www.w3.og/2000/01/rdf-schema#comment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.og/2000/01/rdf-schema#isDefinedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.og/2000/01/rdf-schema#label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#Thing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.og/haps/ont",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An agent"
+  }, {
+    "@language" : "it",
+    "@value" : "Un agente."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Agent"
+  }, {
+    "@language" : "it",
+    "@value" : "Agente"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/Attack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Il tipo di richiesta che rappresenta un attacco."
+  }, {
+    "@language" : "en",
+    "@value" : "The request type that represent an attack"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Attacco"
+  }, {
+    "@language" : "en",
+    "@value" : "Attack"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/RequestType"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.og/haps/ont/RegularRequest"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/Attacker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "L'agente che effettua un attacco."
+  }, {
+    "@language" : "en",
+    "@value" : "The agent who carries on an attack."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Attaccante"
+  }, {
+    "@language" : "en",
+    "@value" : "Attacker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/Agent"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/CodeInjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Classe astratta che definisce il concetto di code injection."
+  }, {
+    "@language" : "en",
+    "@value" : "The abstract class defining the code injection concept."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Code injection"
+  }, {
+    "@language" : "it",
+    "@value" : "Code injection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attack"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/CommandExec",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Il tipo di attacco denominato Command exec"
+  }, {
+    "@language" : "en",
+    "@value" : "The Command exec attack"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Command exec"
+  }, {
+    "@language" : "it",
+    "@value" : "Command exec"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attack"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/GET",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.og/haps/ont/Method" ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/HEAD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.og/haps/ont/Method" ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/HTTPRequest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An HTTP request."
+  }, {
+    "@language" : "it",
+    "@value" : "Una richiesta HTTP"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "HTTP request"
+  }, {
+    "@language" : "it",
+    "@value" : "Richiesta HTTP"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/IPAddess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La parte di una richiesta HTTP che rappresenta l'indirizzo IP."
+  }, {
+    "@language" : "en",
+    "@value" : "The part of an HTTP request representing the IP address."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "IP address"
+  }, {
+    "@language" : "it",
+    "@value" : "Indirizzo IP"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/LDAPInjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Il tipo di attacco denominato LDAP injection."
+  }, {
+    "@language" : "en",
+    "@value" : "The LDAP injection attack."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "LDAP injection"
+  }, {
+    "@language" : "it",
+    "@value" : "LDAP injection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/CodeInjection"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/Method",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La parte di una richista HTTP che rappresenta il metodo  (ex. GET, POST, etc.)."
+  }, {
+    "@language" : "en",
+    "@value" : "The part of an HTTP request representing the method (eg. GET, POST, etc.)."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Method"
+  }, {
+    "@language" : "it",
+    "@value" : "Metodo"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/POST",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.og/haps/ont/Method" ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/PUT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.og/haps/ont/Method" ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/PathTavesal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Il tipo di attacco denominato path o directory traversal."
+  }, {
+    "@language" : "en",
+    "@value" : "The path or directory traversal attack."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Path traversal"
+  }, {
+    "@language" : "it",
+    "@value" : "Path traversal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attack"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/Payload",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La parte di una richiesta HTTP che rappresenta il payload."
+  }, {
+    "@language" : "en",
+    "@value" : "The part of an HTTP request representing the payload."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Payload"
+  }, {
+    "@language" : "it",
+    "@value" : "Payload"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/RegularRequest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Il tipo che rappresenta una richiesta regolare."
+  }, {
+    "@language" : "en",
+    "@value" : "The type that represents a regualar request."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Regular request"
+  }, {
+    "@language" : "it",
+    "@value" : "Richiesta regolare"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/RequestType"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/RequestClassificationResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Il risultato della classificazione di una richiesta per determinare se essa può essere identificata come malevola o regolare."
+  }, {
+    "@language" : "en",
+    "@value" : "The request classification result that allows to assert if a specific request is malicius or regular."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Request classification result"
+  }, {
+    "@language" : "it",
+    "@value" : "Risultato di classificazione di richiesta"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/RequestType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A request type"
+  }, {
+    "@language" : "it",
+    "@value" : "Un tipo di richiesta"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Request type"
+  }, {
+    "@language" : "it",
+    "@value" : "Tipo di richiesta"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/SQLInjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Il tipo di attacco denominato SQL injection."
+  }, {
+    "@language" : "en",
+    "@value" : "The SQL injection attack."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SQL injection"
+  }, {
+    "@language" : "it",
+    "@value" : "SQL injection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/CodeInjection"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/UserAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Lo user agent"
+  }, {
+    "@language" : "en",
+    "@value" : "The user agent"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "User agent"
+  }, {
+    "@language" : "it",
+    "@value" : "User agent"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/Vulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A vulnerability associated with a web application."
+  }, {
+    "@language" : "it",
+    "@value" : "Una vulnerabilità a cui è soggetta un'applicazione web"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vulnerability"
+  }, {
+    "@language" : "it",
+    "@value" : "Vulnerabilità"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/WebApplication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A web application"
+  }, {
+    "@language" : "it",
+    "@value" : "Un'applicazione web."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Applicazione web"
+  }, {
+    "@language" : "en",
+    "@value" : "Web application"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/WebServer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A web server"
+  }, {
+    "@language" : "it",
+    "@value" : "Un web server"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Server web"
+  }, {
+    "@language" : "en",
+    "@value" : "Web server"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/XPATHInjection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Il tipo di attacco denominato XPATH injection."
+  }, {
+    "@language" : "en",
+    "@value" : "The XPATH injection attack."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "XPATH injection"
+  }, {
+    "@language" : "it",
+    "@value" : "XPATH injection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/CodeInjection"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/XSS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "L'attacco XSS."
+  }, {
+    "@language" : "en",
+    "@value" : "The XSS attack"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "XSS"
+  }, {
+    "@language" : "it",
+    "@value" : "XSS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attack"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/accepts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La proprietà che permette di asserire quali tipi di richieste HTTP sono accettate da un'applicazione web."
+  }, {
+    "@language" : "en",
+    "@value" : "The property that allows to assert what kind of HTTP requests are accepted by a web application."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "accepts"
+  }, {
+    "@language" : "it",
+    "@value" : "accetta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/WebApplication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/HTTPRequest"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/exploitsVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La proprietà che associa un attacco ad una vulnerabilità."
+  }, {
+    "@language" : "en",
+    "@value" : "The property that associates an attack with a vulnerability."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "exploits vulnerability"
+  }, {
+    "@language" : "it",
+    "@value" : "sfrutta vulnerabilità"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attack"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/Vulnerability"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/isVulnerabilityExploitedBy"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/hasAttacker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La relazione che associa un attacco con l'agente che effettua l'attacco (attaccante)."
+  }, {
+    "@language" : "en",
+    "@value" : "The relation that associates an attack with the agent who performs the attack (i.e. attacker)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attack"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "ha attaccante"
+  }, {
+    "@language" : "en",
+    "@value" : "has attacker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attacker"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/hasPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La relazione di parte."
+  }, {
+    "@language" : "en",
+    "@value" : "The part-of relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "ha parte"
+  }, {
+    "@language" : "en",
+    "@value" : "has part"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/isPartOf"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/hasVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La proprietà che associa un'applicazione web ad una vulnerabilità."
+  }, {
+    "@language" : "en",
+    "@value" : "The property that associates a web application to a vulnerability."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "ha vulnerabilità"
+  }, {
+    "@language" : "en",
+    "@value" : "has vulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/WebApplication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/Vulnerability"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/isVulnerabilityOf"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/hasWebApplication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La proprietà che associa un server web ad una delle sue applicaizoni web."
+  }, {
+    "@language" : "en",
+    "@value" : "The property that associates a web server to a one of its web applications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/WebServer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "ha applicazione web"
+  }, {
+    "@language" : "en",
+    "@value" : "has web application"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/WebApplication"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/isWebApplicationOf"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/isAttackerOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La relazione che associa un agente (attaccante) ad un attacco."
+  }, {
+    "@language" : "en",
+    "@value" : "The ralation that associates an agent (i.e. attacker) to an attack."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attacker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is attacker of"
+  }, {
+    "@language" : "it",
+    "@value" : "è attaccante di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attack"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/isMadeBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.og/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La proprietà che associa un'instanza di classificazione di richiesta HTTP all'agente che effettua la classificazione."
+  }, {
+    "@language" : "en",
+    "@value" : "The propriety that associates a request classification instance to an agent performing the request."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/RequestClassificationResult"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is made by"
+  }, {
+    "@language" : "it",
+    "@value" : "è fatta da"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/Agent"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/makes"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/isPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La relazione inversa della relazione di parte."
+  }, {
+    "@language" : "en",
+    "@value" : "The inverse of the part-of relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is part of"
+  }, {
+    "@language" : "it",
+    "@value" : "è parte di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/isRequestTypeUsedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La relazione che associa un tipo di richiesta ad un risultato di classificazione di richiesta."
+  }, {
+    "@language" : "en",
+    "@value" : "The relation that associates a request type with a request classification result."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/RequestType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is request type used by"
+  }, {
+    "@language" : "it",
+    "@value" : "è tipo di richiesta usato da"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/RequestClassificationResult"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.og/haps/ont/usesRequestType"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/isVulnerabilityExploitedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La proprietà che associa una vulnerabilità con un attacco,"
+  }, {
+    "@language" : "en",
+    "@value" : "The property that associates a vulnerability with an attack."
+  }, {
+    "@language" : "en",
+    "@value" : "is vulnerability exploited by"
+  }, {
+    "@language" : "it",
+    "@value" : "è vulnerabilità sfruttata da"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/Vulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/Attack"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/isVulnerabilityOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.og/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La proprietà che associa una vulnerabilità ad un'applicazione web."
+  }, {
+    "@language" : "en",
+    "@value" : "The property that associates a vulnerability to a web application."
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/haps/ont"
+  } ],
+  "http://www.w3.og/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is vulnerability of"
+  }, {
+    "@language" : "it",
+    "@value" : "è vulnerabilità di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/Vulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/WebApplication"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/isWebApplicationOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La proprietà che associa un'applicazione web sul server su cui viene eseguita."
+  }, {
+    "@language" : "en",
+    "@value" : "The propriety that associates a web application to the web server it is running on."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/WebApplication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is web application of"
+  }, {
+    "@language" : "it",
+    "@value" : "è applicazione web di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/WebServer"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/makes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La proprietà che associa un agente con la classificazione di richiesta HTTP che esso effettua."
+  }, {
+    "@language" : "en",
+    "@value" : "The propriety that associates an agent to the HTTP request classification it performs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/Agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "fa"
+  }, {
+    "@language" : "en",
+    "@value" : "makes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/RequestClassificationResult"
+  } ]
+}, {
+  "@id" : "https://w3id.og/haps/ont/usesRequestType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "La relazione che associa un risultato di classificazione di richiesta ad un tipo di richiesta."
+  }, {
+    "@language" : "en",
+    "@value" : "The relation that associates a request classification result with a request type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.og/haps/ont/RequestClassificationResult"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/haps/ont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "usa tipo di richiesta"
+  }, {
+    "@language" : "en",
+    "@value" : "uses request type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.og/haps/ont/RequestType"
+  } ]
+} ]

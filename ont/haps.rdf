@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.og/haps/ont/"
+     xml:base="https://w3id.og/haps/ont/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.og/haps/ont"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.og/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.og/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.og/2000/01/rdf-schema#isDefinedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.og/2000/01/rdf-schema#isDefinedBy"/>
+    
+
+
+    <!-- http://www.w3.og/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.og/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.og/haps/ont/accepts -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/accepts">
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/WebApplication"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/HTTPRequest"/>
+        <rdfs:comment xml:lang="it">La proprietà che permette di asserire quali tipi di richieste HTTP sono accettate da un&apos;applicazione web.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property that allows to assert what kind of HTTP requests are accepted by a web application.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">accepts</rdfs:label>
+        <rdfs:label xml:lang="it">accetta</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/exploitsVulnerability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/exploitsVulnerability">
+        <owl:inverseOf rdf:resource="https://w3id.og/haps/ont/isVulnerabilityExploitedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/Attack"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/Vulnerability"/>
+        <rdfs:comment xml:lang="it">La proprietà che associa un attacco ad una vulnerabilità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property that associates an attack with a vulnerability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">exploits vulnerability</rdfs:label>
+        <rdfs:label xml:lang="it">sfrutta vulnerabilità</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/hasAttacker -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/hasAttacker">
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/Attack"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/Attacker"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:comment xml:lang="it">La relazione che associa un attacco con l&apos;agente che effettua l&apos;attacco (attaccante).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The relation that associates an attack with the agent who performs the attack (i.e. attacker).</rdfs:comment>
+        <rdfs:label xml:lang="it">ha attaccante</rdfs:label>
+        <rdfs:label xml:lang="en">has attacker</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/hasPart">
+        <owl:inverseOf rdf:resource="https://w3id.og/haps/ont/isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">La relazione di parte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The part-of relation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/haps/ont"/>
+        <rdfs:label xml:lang="it">ha parte</rdfs:label>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/hasVulnerability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/hasVulnerability">
+        <owl:inverseOf rdf:resource="https://w3id.og/haps/ont/isVulnerabilityOf"/>
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/WebApplication"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/Vulnerability"/>
+        <rdfs:comment xml:lang="it">La proprietà che associa un&apos;applicazione web ad una vulnerabilità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property that associates a web application to a vulnerability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="it">ha vulnerabilità</rdfs:label>
+        <rdfs:label xml:lang="en">has vulnerability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/hasWebApplication -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/hasWebApplication">
+        <owl:inverseOf rdf:resource="https://w3id.og/haps/ont/isWebApplicationOf"/>
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/WebServer"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/WebApplication"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:comment xml:lang="it">La proprietà che associa un server web ad una delle sue applicaizoni web.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property that associates a web server to a one of its web applications.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha applicazione web</rdfs:label>
+        <rdfs:label xml:lang="en">has web application</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/isAttackerOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/isAttackerOf">
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/Attacker"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/Attack"/>
+        <rdfs:comment xml:lang="it">La relazione che associa un agente (attaccante) ad un attacco.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The ralation that associates an agent (i.e. attacker) to an attack.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/haps/ont"/>
+        <rdfs:label xml:lang="en">is attacker of</rdfs:label>
+        <rdfs:label xml:lang="it">è attaccante di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/isMadeBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/isMadeBy">
+        <owl:inverseOf rdf:resource="https://w3id.og/haps/ont/makes"/>
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/RequestClassificationResult"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/Agent"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:comment xml:lang="it">La proprietà che associa un&apos;instanza di classificazione di richiesta HTTP all&apos;agente che effettua la classificazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The propriety that associates a request classification instance to an agent performing the request.</rdfs:comment>
+        <rdfs:label xml:lang="en">is made by</rdfs:label>
+        <rdfs:label xml:lang="it">è fatta da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/isPartOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="it">La relazione inversa della relazione di parte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The inverse of the part-of relation.</rdfs:comment>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+        <rdfs:label xml:lang="it">è parte di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/isRequestTypeUsedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/isRequestTypeUsedBy">
+        <owl:inverseOf rdf:resource="https://w3id.og/haps/ont/usesRequestType"/>
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/RequestType"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/RequestClassificationResult"/>
+        <rdfs:comment xml:lang="it">La relazione che associa un tipo di richiesta ad un risultato di classificazione di richiesta.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The relation that associates a request type with a request classification result.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/haps/ont"/>
+        <rdfs:label xml:lang="en">is request type used by</rdfs:label>
+        <rdfs:label xml:lang="it">è tipo di richiesta usato da</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/isVulnerabilityExploitedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/isVulnerabilityExploitedBy">
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/Vulnerability"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/Attack"/>
+        <rdfs:comment xml:lang="it">La proprietà che associa una vulnerabilità con un attacco,</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property that associates a vulnerability with an attack.</rdfs:comment>
+        <rdfs:comment xml:lang="en">is vulnerability exploited by</rdfs:comment>
+        <rdfs:comment xml:lang="it">è vulnerabilità sfruttata da</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/haps/ont"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/isVulnerabilityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/isVulnerabilityOf">
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/Vulnerability"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/WebApplication"/>
+        <rdfs:comment xml:lang="it">La proprietà che associa una vulnerabilità ad un&apos;applicazione web.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property that associates a vulnerability to a web application.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/haps/ont"/>
+        <rdfs:label xml:lang="en">is vulnerability of</rdfs:label>
+        <rdfs:label xml:lang="it">è vulnerabilità di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/isWebApplicationOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/isWebApplicationOf">
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/WebApplication"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/WebServer"/>
+        <rdfs:comment xml:lang="it">La proprietà che associa un&apos;applicazione web sul server su cui viene eseguita.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The propriety that associates a web application to the web server it is running on.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/haps/ont"/>
+        <rdfs:label xml:lang="en">is web application of</rdfs:label>
+        <rdfs:label xml:lang="it">è applicazione web di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/makes -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/makes">
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/Agent"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/RequestClassificationResult"/>
+        <rdfs:comment xml:lang="it">La proprietà che associa un agente con la classificazione di richiesta HTTP che esso effettua.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The propriety that associates an agent to the HTTP request classification it performs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/haps/ont"/>
+        <rdfs:label xml:lang="it">fa</rdfs:label>
+        <rdfs:label xml:lang="en">makes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.og/haps/ont/usesRequestType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.og/haps/ont/usesRequestType">
+        <rdfs:domain rdf:resource="https://w3id.og/haps/ont/RequestClassificationResult"/>
+        <rdfs:range rdf:resource="https://w3id.og/haps/ont/RequestType"/>
+        <rdfs:comment xml:lang="it">La relazione che associa un risultato di classificazione di richiesta ad un tipo di richiesta.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The relation that associates a request classification result with a request type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/haps/ont"/>
+        <rdfs:label xml:lang="it">usa tipo di richiesta</rdfs:label>
+        <rdfs:label xml:lang="en">uses request type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- https://w3id.og/haps/ont/Agent -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/Agent">
+        <rdfs:comment xml:lang="en">An agent</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un agente.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+        <rdfs:label xml:lang="it">Agente</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/Attack -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/Attack">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/RequestType"/>
+        <owl:disjointWith rdf:resource="https://w3id.og/haps/ont/RegularRequest"/>
+        <rdfs:comment xml:lang="it">Il tipo di richiesta che rappresenta un attacco.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The request type that represent an attack</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="it">Attacco</rdfs:label>
+        <rdfs:label xml:lang="en">Attack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/Attacker -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/Attacker">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/Agent"/>
+        <rdfs:comment xml:lang="it">L&apos;agente che effettua un attacco.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The agent who carries on an attack.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="it">Attaccante</rdfs:label>
+        <rdfs:label xml:lang="en">Attacker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/CodeInjection -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/CodeInjection">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/Attack"/>
+        <rdfs:comment xml:lang="it">Classe astratta che definisce il concetto di code injection.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The abstract class defining the code injection concept.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/haps/ont"/>
+        <rdfs:label xml:lang="en">Code injection</rdfs:label>
+        <rdfs:label xml:lang="it">Code injection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/CommandExec -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/CommandExec">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/Attack"/>
+        <rdfs:comment xml:lang="it">Il tipo di attacco denominato Command exec</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Command exec attack</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">Command exec</rdfs:label>
+        <rdfs:label xml:lang="it">Command exec</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/HTTPRequest -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/HTTPRequest">
+        <rdfs:comment xml:lang="en">An HTTP request.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Una richiesta HTTP</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">HTTP request</rdfs:label>
+        <rdfs:label xml:lang="it">Richiesta HTTP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/IPAddess -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/IPAddess">
+        <rdfs:comment xml:lang="it">La parte di una richiesta HTTP che rappresenta l&apos;indirizzo IP.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The part of an HTTP request representing the IP address.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">IP address</rdfs:label>
+        <rdfs:label xml:lang="it">Indirizzo IP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/LDAPInjection -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/LDAPInjection">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/CodeInjection"/>
+        <rdfs:comment xml:lang="it">Il tipo di attacco denominato LDAP injection.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The LDAP injection attack.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">LDAP injection</rdfs:label>
+        <rdfs:label xml:lang="it">LDAP injection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/Method -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/Method">
+        <rdfs:comment xml:lang="it">La parte di una richista HTTP che rappresenta il metodo  (ex. GET, POST, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The part of an HTTP request representing the method (eg. GET, POST, etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">Method</rdfs:label>
+        <rdfs:label xml:lang="it">Metodo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/PathTavesal -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/PathTavesal">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/Attack"/>
+        <rdfs:comment xml:lang="it">Il tipo di attacco denominato path o directory traversal.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The path or directory traversal attack.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">Path traversal</rdfs:label>
+        <rdfs:label xml:lang="it">Path traversal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/Payload -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/Payload">
+        <rdfs:comment xml:lang="it">La parte di una richiesta HTTP che rappresenta il payload.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The part of an HTTP request representing the payload.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">Payload</rdfs:label>
+        <rdfs:label xml:lang="it">Payload</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/RegularRequest -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/RegularRequest">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/RequestType"/>
+        <rdfs:comment xml:lang="it">Il tipo che rappresenta una richiesta regolare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The type that represents a regualar request.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">Regular request</rdfs:label>
+        <rdfs:label xml:lang="it">Richiesta regolare</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/RequestClassificationResult -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/RequestClassificationResult">
+        <rdfs:comment xml:lang="it">Il risultato della classificazione di una richiesta per determinare se essa può essere identificata come malevola o regolare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The request classification result that allows to assert if a specific request is malicius or regular.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">Request classification result</rdfs:label>
+        <rdfs:label xml:lang="it">Risultato di classificazione di richiesta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/RequestType -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/RequestType">
+        <rdfs:comment xml:lang="en">A request type</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un tipo di richiesta</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">Request type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di richiesta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/SQLInjection -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/SQLInjection">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/CodeInjection"/>
+        <rdfs:comment xml:lang="it">Il tipo di attacco denominato SQL injection.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The SQL injection attack.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">SQL injection</rdfs:label>
+        <rdfs:label xml:lang="it">SQL injection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/UserAgent -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/UserAgent">
+        <rdfs:comment xml:lang="it">Lo user agent</rdfs:comment>
+        <rdfs:comment xml:lang="en">The user agent</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">User agent</rdfs:label>
+        <rdfs:label xml:lang="it">User agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/Vulnerability -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/Vulnerability">
+        <rdfs:comment xml:lang="en">A vulnerability associated with a web application.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Una vulnerabilità a cui è soggetta un&apos;applicazione web</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">Vulnerability</rdfs:label>
+        <rdfs:label xml:lang="it">Vulnerabilità</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/WebApplication -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/WebApplication">
+        <rdfs:comment xml:lang="en">A web application</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un&apos;applicazione web.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="it">Applicazione web</rdfs:label>
+        <rdfs:label xml:lang="en">Web application</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/WebServer -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/WebServer">
+        <rdfs:comment xml:lang="en">A web server</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un web server</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="it">Server web</rdfs:label>
+        <rdfs:label xml:lang="en">Web server</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/XPATHInjection -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/XPATHInjection">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/CodeInjection"/>
+        <rdfs:comment xml:lang="it">Il tipo di attacco denominato XPATH injection.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The XPATH injection attack.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">XPATH injection</rdfs:label>
+        <rdfs:label xml:lang="it">XPATH injection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.og/haps/ont/XSS -->
+
+    <owl:Class rdf:about="https://w3id.og/haps/ont/XSS">
+        <rdfs:subClassOf rdf:resource="https://w3id.og/haps/ont/Attack"/>
+        <rdfs:comment xml:lang="it">L&apos;attacco XSS.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The XSS attack</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+        <rdfs:label xml:lang="en">XSS</rdfs:label>
+        <rdfs:label xml:lang="it">XSS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.og/haps/ont/GET -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.og/haps/ont/GET">
+        <rdf:type rdf:resource="https://w3id.og/haps/ont/Method"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.og/haps/ont/HEAD -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.og/haps/ont/HEAD">
+        <rdf:type rdf:resource="https://w3id.og/haps/ont/Method"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.og/haps/ont/POST -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.og/haps/ont/POST">
+        <rdf:type rdf:resource="https://w3id.og/haps/ont/Method"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.og/haps/ont/PUT -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.og/haps/ont/PUT">
+        <rdf:type rdf:resource="https://w3id.og/haps/ont/Method"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.og/haps/ont"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

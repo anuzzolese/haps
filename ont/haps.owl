@@ -1,0 +1,1275 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.og/haps/ont"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.og/haps/ont">
+    <Prefix name="" IRI="https://w3id.og/haps/ont/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.og/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.og/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="/Attacker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/WebServer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isMadeBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasAttacker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/RequestClassificationResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/WebApplication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/IPAddess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Attack"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/PathTavesal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/XSS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isWebApplicationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isVulnerabilityOf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CommandExec"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/LDAPInjection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/POST"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Agent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isAttackerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/makes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasVulnerability"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/HEAD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Payload"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasWebApplication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/RegularRequest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/GET"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CodeInjection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2002/07/owl#Thing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/exploitsVulnerability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/usesRequestType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/SQLInjection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/RequestType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/HTTPRequest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Vulnerability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isRequestTypeUsedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/accepts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/XPATHInjection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isVulnerabilityExploitedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/PUT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/UserAgent"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/Attack"/>
+        <Class IRI="/RequestType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Attacker"/>
+        <Class IRI="/Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CodeInjection"/>
+        <Class IRI="/Attack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CommandExec"/>
+        <Class IRI="/Attack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/LDAPInjection"/>
+        <Class IRI="/CodeInjection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/PathTavesal"/>
+        <Class IRI="/Attack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/RegularRequest"/>
+        <Class IRI="/RequestType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/SQLInjection"/>
+        <Class IRI="/CodeInjection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/XPATHInjection"/>
+        <Class IRI="/CodeInjection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/XSS"/>
+        <Class IRI="/Attack"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/Attack"/>
+        <Class IRI="/RegularRequest"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="/Method"/>
+        <NamedIndividual IRI="/GET"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Method"/>
+        <NamedIndividual IRI="/HEAD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Method"/>
+        <NamedIndividual IRI="/POST"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Method"/>
+        <NamedIndividual IRI="/PUT"/>
+    </ClassAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/exploitsVulnerability"/>
+        <ObjectProperty IRI="/isVulnerabilityExploitedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasPart"/>
+        <ObjectProperty IRI="/isPartOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasVulnerability"/>
+        <ObjectProperty IRI="/isVulnerabilityOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/hasWebApplication"/>
+        <ObjectProperty IRI="/isWebApplicationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/isMadeBy"/>
+        <ObjectProperty IRI="/makes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/isRequestTypeUsedBy"/>
+        <ObjectProperty IRI="/usesRequestType"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/accepts"/>
+        <Class IRI="/WebApplication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/exploitsVulnerability"/>
+        <Class IRI="/Attack"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasAttacker"/>
+        <Class IRI="/Attack"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasPart"/>
+        <Class IRI="http://www.w3.org/2002/07/owl#Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasVulnerability"/>
+        <Class IRI="/WebApplication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasWebApplication"/>
+        <Class IRI="/WebServer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isAttackerOf"/>
+        <Class IRI="/Attacker"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isMadeBy"/>
+        <Class IRI="/RequestClassificationResult"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isPartOf"/>
+        <Class IRI="http://www.w3.org/2002/07/owl#Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isRequestTypeUsedBy"/>
+        <Class IRI="/RequestType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isVulnerabilityExploitedBy"/>
+        <Class IRI="/Vulnerability"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isVulnerabilityOf"/>
+        <Class IRI="/Vulnerability"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isWebApplicationOf"/>
+        <Class IRI="/WebApplication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/makes"/>
+        <Class IRI="/Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/usesRequestType"/>
+        <Class IRI="/RequestClassificationResult"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/accepts"/>
+        <Class IRI="/HTTPRequest"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/exploitsVulnerability"/>
+        <Class IRI="/Vulnerability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasAttacker"/>
+        <Class IRI="/Attacker"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasPart"/>
+        <Class IRI="http://www.w3.org/2002/07/owl#Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasVulnerability"/>
+        <Class IRI="/Vulnerability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasWebApplication"/>
+        <Class IRI="/WebApplication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isAttackerOf"/>
+        <Class IRI="/Attack"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isMadeBy"/>
+        <Class IRI="/Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isPartOf"/>
+        <Class IRI="http://www.w3.org/2002/07/owl#Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isRequestTypeUsedBy"/>
+        <Class IRI="/RequestClassificationResult"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isVulnerabilityExploitedBy"/>
+        <Class IRI="/Attack"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isVulnerabilityOf"/>
+        <Class IRI="/WebApplication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isWebApplicationOf"/>
+        <Class IRI="/WebServer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/makes"/>
+        <Class IRI="/RequestClassificationResult"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/usesRequestType"/>
+        <Class IRI="/RequestType"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Agent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Agent</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Un agente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Agent</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Agent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Agent</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Agente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Attack</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Il tipo di richiesta che rappresenta un attacco.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Attack</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The request type that represent an attack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Attack</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Attack</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Attacco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Attack</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Attack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Attacker</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">L&apos;agente che effettua un attacco.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Attacker</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The agent who carries on an attack.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Attacker</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Attacker</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Attaccante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Attacker</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Attacker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CodeInjection</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Classe astratta che definisce il concetto di code injection.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CodeInjection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The abstract class defining the code injection concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CodeInjection</IRI>
+        <IRI>https://w3id.org/haps/ont</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CodeInjection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Code injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CodeInjection</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Code injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CommandExec</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Il tipo di attacco denominato Command exec</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CommandExec</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Command exec attack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/CommandExec</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CommandExec</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Command exec</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CommandExec</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Command exec</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/GET</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/HEAD</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/HTTPRequest</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An HTTP request.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/HTTPRequest</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Una richiesta HTTP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/HTTPRequest</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/HTTPRequest</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HTTP request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/HTTPRequest</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Richiesta HTTP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/IPAddess</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La parte di una richiesta HTTP che rappresenta l&apos;indirizzo IP.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/IPAddess</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The part of an HTTP request representing the IP address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/IPAddess</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/IPAddess</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IP address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/IPAddess</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indirizzo IP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/LDAPInjection</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Il tipo di attacco denominato LDAP injection.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/LDAPInjection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The LDAP injection attack.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/LDAPInjection</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/LDAPInjection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LDAP injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/LDAPInjection</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LDAP injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Method</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La parte di una richista HTTP che rappresenta il metodo  (ex. GET, POST, etc.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Method</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The part of an HTTP request representing the method (eg. GET, POST, etc.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Method</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Method</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Method</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Metodo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/POST</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/PUT</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/PathTavesal</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Il tipo di attacco denominato path o directory traversal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/PathTavesal</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The path or directory traversal attack.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/PathTavesal</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/PathTavesal</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Path traversal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/PathTavesal</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Path traversal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Payload</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La parte di una richiesta HTTP che rappresenta il payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Payload</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The part of an HTTP request representing the payload.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Payload</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Payload</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Payload</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Payload</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/RegularRequest</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Il tipo che rappresenta una richiesta regolare.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/RegularRequest</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The type that represents a regualar request.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RegularRequest</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/RegularRequest</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Regular request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/RegularRequest</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Richiesta regolare</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/RequestClassificationResult</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Il risultato della classificazione di una richiesta per determinare se essa può essere identificata come malevola o regolare.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/RequestClassificationResult</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The request classification result that allows to assert if a specific request is malicius or regular.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RequestClassificationResult</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/RequestClassificationResult</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Request classification result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/RequestClassificationResult</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Risultato di classificazione di richiesta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/RequestType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A request type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/RequestType</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Un tipo di richiesta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/RequestType</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/RequestType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Request type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/RequestType</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tipo di richiesta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SQLInjection</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Il tipo di attacco denominato SQL injection.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SQLInjection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The SQL injection attack.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/SQLInjection</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/SQLInjection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SQL injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/SQLInjection</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SQL injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/UserAgent</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lo user agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/UserAgent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The user agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/UserAgent</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/UserAgent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">User agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/UserAgent</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">User agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Vulnerability</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A vulnerability associated with a web application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Vulnerability</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Una vulnerabilità a cui è soggetta un&apos;applicazione web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Vulnerability</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Vulnerability</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Vulnerability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Vulnerability</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Vulnerabilità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/WebApplication</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A web application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/WebApplication</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Un&apos;applicazione web.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/WebApplication</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/WebApplication</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Applicazione web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/WebApplication</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Web application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/WebServer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A web server</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/WebServer</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Un web server</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/WebServer</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/WebServer</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Server web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/WebServer</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Web server</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/XPATHInjection</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Il tipo di attacco denominato XPATH injection.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/XPATHInjection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The XPATH injection attack.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/XPATHInjection</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/XPATHInjection</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">XPATH injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/XPATHInjection</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">XPATH injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/XSS</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">L&apos;attacco XSS.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/XSS</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The XSS attack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/XSS</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/XSS</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">XSS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/XSS</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">XSS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/accepts</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La proprietà che permette di asserire quali tipi di richieste HTTP sono accettate da un&apos;applicazione web.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/accepts</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The property that allows to assert what kind of HTTP requests are accepted by a web application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/accepts</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/accepts</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">accepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/accepts</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">accetta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/exploitsVulnerability</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La proprietà che associa un attacco ad una vulnerabilità.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/exploitsVulnerability</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The property that associates an attack with a vulnerability.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/exploitsVulnerability</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/exploitsVulnerability</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">exploits vulnerability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/exploitsVulnerability</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sfrutta vulnerabilità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasAttacker</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/hasAttacker</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La relazione che associa un attacco con l&apos;agente che effettua l&apos;attacco (attaccante).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/hasAttacker</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The relation that associates an attack with the agent who performs the attack (i.e. attacker).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/hasAttacker</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ha attaccante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/hasAttacker</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has attacker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/hasPart</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La relazione di parte.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/hasPart</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The part-of relation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <IRI>/hasPart</IRI>
+        <IRI>https://w3id.org/haps/ont</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/hasPart</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ha parte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/hasPart</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasVulnerability</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La proprietà che associa un&apos;applicazione web ad una vulnerabilità.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/hasVulnerability</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The property that associates a web application to a vulnerability.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasVulnerability</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasVulnerability</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ha vulnerabilità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/hasVulnerability</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has vulnerability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/hasWebApplication</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/hasWebApplication</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La proprietà che associa un server web ad una delle sue applicaizoni web.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/hasWebApplication</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The property that associates a web server to a one of its web applications.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/hasWebApplication</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ha applicazione web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/hasWebApplication</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has web application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isAttackerOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La relazione che associa un agente (attaccante) ad un attacco.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isAttackerOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The ralation that associates an agent (i.e. attacker) to an attack.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <IRI>/isAttackerOf</IRI>
+        <IRI>https://w3id.org/haps/ont</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isAttackerOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is attacker of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isAttackerOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">è attaccante di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isMadeBy</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isMadeBy</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La proprietà che associa un&apos;instanza di classificazione di richiesta HTTP all&apos;agente che effettua la classificazione.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isMadeBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The propriety that associates a request classification instance to an agent performing the request.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isMadeBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is made by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isMadeBy</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">è fatta da</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isPartOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La relazione inversa della relazione di parte.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isPartOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The inverse of the part-of relation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isPartOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isPartOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">è parte di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isRequestTypeUsedBy</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La relazione che associa un tipo di richiesta ad un risultato di classificazione di richiesta.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isRequestTypeUsedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The relation that associates a request type with a request classification result.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <IRI>/isRequestTypeUsedBy</IRI>
+        <IRI>https://w3id.org/haps/ont</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isRequestTypeUsedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is request type used by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isRequestTypeUsedBy</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">è tipo di richiesta usato da</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isVulnerabilityExploitedBy</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La proprietà che associa una vulnerabilità con un attacco,</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isVulnerabilityExploitedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The property that associates a vulnerability with an attack.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isVulnerabilityExploitedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is vulnerability exploited by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isVulnerabilityExploitedBy</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">è vulnerabilità sfruttata da</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isVulnerabilityExploitedBy</IRI>
+        <IRI>https://w3id.org/haps/ont</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isVulnerabilityOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La proprietà che associa una vulnerabilità ad un&apos;applicazione web.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isVulnerabilityOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The property that associates a vulnerability to a web application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/isVulnerabilityOf</IRI>
+        <IRI>https://w3id.org/haps/ont</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isVulnerabilityOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is vulnerability of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/isVulnerabilityOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">è vulnerabilità di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isWebApplicationOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La proprietà che associa un&apos;applicazione web sul server su cui viene eseguita.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/isWebApplicationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The propriety that associates a web application to the web server it is running on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <IRI>/isWebApplicationOf</IRI>
+        <IRI>https://w3id.org/haps/ont</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isWebApplicationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is web application of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/isWebApplicationOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">è applicazione web di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/makes</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La proprietà che associa un agente con la classificazione di richiesta HTTP che esso effettua.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/makes</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The propriety that associates an agent to the HTTP request classification it performs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <IRI>/makes</IRI>
+        <IRI>https://w3id.org/haps/ont</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/makes</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">fa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/makes</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">makes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/usesRequestType</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">La relazione che associa un risultato di classificazione di richiesta ad un tipo di richiesta.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <IRI>/usesRequestType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The relation that associates a request classification result with a request type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <IRI>/usesRequestType</IRI>
+        <IRI>https://w3id.org/haps/ont</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/usesRequestType</IRI>
+        <Literal xml:lang="it" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">usa tipo di richiesta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <IRI>/usesRequestType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">uses request type</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

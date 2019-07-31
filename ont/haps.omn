@@ -1,0 +1,585 @@
+Prefix: : <https://w3id.og/haps/ont/>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.og/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.og/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <https://w3id.og/haps/ont>
+
+
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: accepts
+
+    Annotations: 
+        rdfs:label "accetta"@it,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "accepts"@en,
+        rdfs:comment "La proprietà che permette di asserire quali tipi di richieste HTTP sono accettate da un'applicazione web."@it,
+        rdfs:comment "The property that allows to assert what kind of HTTP requests are accepted by a web application."@en
+    
+    Domain: 
+        WebApplication
+    
+    Range: 
+        HTTPRequest
+    
+    
+ObjectProperty: exploitsVulnerability
+
+    Annotations: 
+        rdfs:label "exploits vulnerability"@en,
+        rdfs:label "sfrutta vulnerabilità"@it,
+        rdfs:comment "La proprietà che associa un attacco ad una vulnerabilità."@it,
+        rdfs:comment "The property that associates an attack with a vulnerability."@en,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>
+    
+    Domain: 
+        Attack
+    
+    Range: 
+        Vulnerability
+    
+    InverseOf: 
+        isVulnerabilityExploitedBy
+    
+    
+ObjectProperty: hasAttacker
+
+    Annotations: 
+        rdfs:comment "La relazione che associa un attacco con l'agente che effettua l'attacco (attaccante)."@it,
+        rdfs:comment "The relation that associates an attack with the agent who performs the attack (i.e. attacker)."@en,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "has attacker"@en,
+        rdfs:label "ha attaccante"@it
+    
+    Domain: 
+        Attack
+    
+    Range: 
+        Attacker
+    
+    
+ObjectProperty: hasPart
+
+    Annotations: 
+        rdfs:label "has part"@en,
+        rdfs:label "ha parte"@it,
+        rdfs:isDefinedBy <https://w3id.org/haps/ont>,
+        rdfs:comment "La relazione di parte."@it,
+        rdfs:comment "The part-of relation."@en
+    
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        owl:Thing
+    
+    InverseOf: 
+        isPartOf
+    
+    
+ObjectProperty: hasVulnerability
+
+    Annotations: 
+        rdfs:comment "The property that associates a web application to a vulnerability."@en,
+        rdfs:label "has vulnerability"@en,
+        rdfs:comment "La proprietà che associa un'applicazione web ad una vulnerabilità."@it,
+        rdfs:label "ha vulnerabilità"@it,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>
+    
+    Domain: 
+        WebApplication
+    
+    Range: 
+        Vulnerability
+    
+    InverseOf: 
+        isVulnerabilityOf
+    
+    
+ObjectProperty: hasWebApplication
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:comment "The property that associates a web server to a one of its web applications."@en,
+        rdfs:comment "La proprietà che associa un server web ad una delle sue applicaizoni web."@it,
+        rdfs:label "ha applicazione web"@it,
+        rdfs:label "has web application"@en
+    
+    Domain: 
+        WebServer
+    
+    Range: 
+        WebApplication
+    
+    InverseOf: 
+        isWebApplicationOf
+    
+    
+ObjectProperty: isAttackerOf
+
+    Annotations: 
+        rdfs:label "is attacker of"@en,
+        rdfs:comment "The ralation that associates an agent (i.e. attacker) to an attack."@en,
+        rdfs:comment "La relazione che associa un agente (attaccante) ad un attacco."@it,
+        rdfs:isDefinedBy <https://w3id.org/haps/ont>,
+        rdfs:label "è attaccante di"@it
+    
+    Domain: 
+        Attacker
+    
+    Range: 
+        Attack
+    
+    
+ObjectProperty: isMadeBy
+
+    Annotations: 
+        rdfs:label "is made by"@en,
+        rdfs:comment "The propriety that associates a request classification instance to an agent performing the request."@en,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:comment "La proprietà che associa un'instanza di classificazione di richiesta HTTP all'agente che effettua la classificazione."@it,
+        rdfs:label "è fatta da"@it
+    
+    Domain: 
+        RequestClassificationResult
+    
+    Range: 
+        Agent
+    
+    InverseOf: 
+        makes
+    
+    
+ObjectProperty: isPartOf
+
+    Annotations: 
+        rdfs:label "is part of"@en,
+        rdfs:label "è parte di"@it,
+        rdfs:comment "The inverse of the part-of relation."@en,
+        rdfs:comment "La relazione inversa della relazione di parte."@it
+    
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        owl:Thing
+    
+    InverseOf: 
+        hasPart
+    
+    
+ObjectProperty: isRequestTypeUsedBy
+
+    Annotations: 
+        rdfs:comment "La relazione che associa un tipo di richiesta ad un risultato di classificazione di richiesta."@it,
+        rdfs:label "is request type used by"@en,
+        rdfs:comment "The relation that associates a request type with a request classification result."@en,
+        rdfs:isDefinedBy <https://w3id.org/haps/ont>,
+        rdfs:label "è tipo di richiesta usato da"@it
+    
+    Domain: 
+        RequestType
+    
+    Range: 
+        RequestClassificationResult
+    
+    InverseOf: 
+        usesRequestType
+    
+    
+ObjectProperty: isVulnerabilityExploitedBy
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.org/haps/ont>,
+        rdfs:comment "The property that associates a vulnerability with an attack."@en,
+        rdfs:comment "è vulnerabilità sfruttata da"@it,
+        rdfs:comment "La proprietà che associa una vulnerabilità con un attacco,"@it,
+        rdfs:comment "is vulnerability exploited by"@en
+    
+    Domain: 
+        Vulnerability
+    
+    Range: 
+        Attack
+    
+    InverseOf: 
+        exploitsVulnerability
+    
+    
+ObjectProperty: isVulnerabilityOf
+
+    Annotations: 
+        rdfs:comment "The property that associates a vulnerability to a web application."@en,
+        rdfs:isDefinedBy <https://w3id.org/haps/ont>,
+        rdfs:label "is vulnerability of"@en,
+        rdfs:label "è vulnerabilità di"@it,
+        rdfs:comment "La proprietà che associa una vulnerabilità ad un'applicazione web."@it
+    
+    Domain: 
+        Vulnerability
+    
+    Range: 
+        WebApplication
+    
+    InverseOf: 
+        hasVulnerability
+    
+    
+ObjectProperty: isWebApplicationOf
+
+    Annotations: 
+        rdfs:label "è applicazione web di"@it,
+        rdfs:isDefinedBy <https://w3id.org/haps/ont>,
+        rdfs:comment "The propriety that associates a web application to the web server it is running on."@en,
+        rdfs:label "is web application of"@en,
+        rdfs:comment "La proprietà che associa un'applicazione web sul server su cui viene eseguita."@it
+    
+    Domain: 
+        WebApplication
+    
+    Range: 
+        WebServer
+    
+    InverseOf: 
+        hasWebApplication
+    
+    
+ObjectProperty: makes
+
+    Annotations: 
+        rdfs:comment "La proprietà che associa un agente con la classificazione di richiesta HTTP che esso effettua."@it,
+        rdfs:comment "The propriety that associates an agent to the HTTP request classification it performs."@en,
+        rdfs:label "makes"@en,
+        rdfs:label "fa"@it,
+        rdfs:isDefinedBy <https://w3id.org/haps/ont>
+    
+    Domain: 
+        Agent
+    
+    Range: 
+        RequestClassificationResult
+    
+    InverseOf: 
+        isMadeBy
+    
+    
+ObjectProperty: usesRequestType
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.org/haps/ont>,
+        rdfs:comment "La relazione che associa un risultato di classificazione di richiesta ad un tipo di richiesta."@it,
+        rdfs:comment "The relation that associates a request classification result with a request type."@en,
+        rdfs:label "usa tipo di richiesta"@it,
+        rdfs:label "uses request type"@en
+    
+    Domain: 
+        RequestClassificationResult
+    
+    Range: 
+        RequestType
+    
+    InverseOf: 
+        isRequestTypeUsedBy
+    
+    
+Class: Agent
+
+    Annotations: 
+        rdfs:comment "Un agente."@it,
+        rdfs:label "Agent"@en,
+        rdfs:label "Agente"@it,
+        rdfs:comment "An agent"@en,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>
+    
+    
+Class: Attack
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "Attack"@en,
+        rdfs:comment "Il tipo di richiesta che rappresenta un attacco."@it,
+        rdfs:label "Attacco"@it,
+        rdfs:comment "The request type that represent an attack"@en
+    
+    SubClassOf: 
+        RequestType
+    
+    DisjointWith: 
+        RegularRequest
+    
+    
+Class: Attacker
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:comment "L'agente che effettua un attacco."@it,
+        rdfs:comment "The agent who carries on an attack."@en,
+        rdfs:label "Attaccante"@it,
+        rdfs:label "Attacker"@en
+    
+    SubClassOf: 
+        Agent
+    
+    
+Class: CodeInjection
+
+    Annotations: 
+        rdfs:comment "The abstract class defining the code injection concept."@en,
+        rdfs:isDefinedBy <https://w3id.org/haps/ont>,
+        rdfs:label "Code injection"@en,
+        rdfs:comment "Classe astratta che definisce il concetto di code injection."@it,
+        rdfs:label "Code injection"@it
+    
+    SubClassOf: 
+        Attack
+    
+    
+Class: CommandExec
+
+    Annotations: 
+        rdfs:comment "Il tipo di attacco denominato Command exec"@it,
+        rdfs:label "Command exec"@en,
+        rdfs:comment "The Command exec attack"@en,
+        rdfs:label "Command exec"@it,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>
+    
+    SubClassOf: 
+        Attack
+    
+    
+Class: HTTPRequest
+
+    Annotations: 
+        rdfs:label "HTTP request"@en,
+        rdfs:comment "Una richiesta HTTP"@it,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "Richiesta HTTP"@it,
+        rdfs:comment "An HTTP request."@en
+    
+    
+Class: IPAddess
+
+    Annotations: 
+        rdfs:label "Indirizzo IP"@it,
+        rdfs:label "IP address"@en,
+        rdfs:comment "The part of an HTTP request representing the IP address."@en,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:comment "La parte di una richiesta HTTP che rappresenta l'indirizzo IP."@it
+    
+    
+Class: LDAPInjection
+
+    Annotations: 
+        rdfs:label "LDAP injection"@en,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "LDAP injection"@it,
+        rdfs:comment "The LDAP injection attack."@en,
+        rdfs:comment "Il tipo di attacco denominato LDAP injection."@it
+    
+    SubClassOf: 
+        CodeInjection
+    
+    
+Class: Method
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "Metodo"@it,
+        rdfs:label "Method"@en,
+        rdfs:comment "The part of an HTTP request representing the method (eg. GET, POST, etc.)."@en,
+        rdfs:comment "La parte di una richista HTTP che rappresenta il metodo  (ex. GET, POST, etc.)."@it
+    
+    
+Class: PathTavesal
+
+    Annotations: 
+        rdfs:label "Path traversal"@it,
+        rdfs:label "Path traversal"@en,
+        rdfs:comment "Il tipo di attacco denominato path o directory traversal."@it,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:comment "The path or directory traversal attack."@en
+    
+    SubClassOf: 
+        Attack
+    
+    
+Class: Payload
+
+    Annotations: 
+        rdfs:comment "La parte di una richiesta HTTP che rappresenta il payload."@it,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "Payload"@en,
+        rdfs:label "Payload"@it,
+        rdfs:comment "The part of an HTTP request representing the payload."@en
+    
+    
+Class: RegularRequest
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "Regular request"@en,
+        rdfs:comment "Il tipo che rappresenta una richiesta regolare."@it,
+        rdfs:label "Richiesta regolare"@it,
+        rdfs:comment "The type that represents a regualar request."@en
+    
+    SubClassOf: 
+        RequestType
+    
+    DisjointWith: 
+        Attack
+    
+    
+Class: RequestClassificationResult
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "Risultato di classificazione di richiesta"@it,
+        rdfs:label "Request classification result"@en,
+        rdfs:comment "The request classification result that allows to assert if a specific request is malicius or regular."@en,
+        rdfs:comment "Il risultato della classificazione di una richiesta per determinare se essa può essere identificata come malevola o regolare."@it
+    
+    
+Class: RequestType
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:comment "Un tipo di richiesta"@it,
+        rdfs:label "Request type"@en,
+        rdfs:comment "A request type"@en,
+        rdfs:label "Tipo di richiesta"@it
+    
+    
+Class: SQLInjection
+
+    Annotations: 
+        rdfs:comment "The SQL injection attack."@en,
+        rdfs:label "SQL injection"@en,
+        rdfs:comment "Il tipo di attacco denominato SQL injection."@it,
+        rdfs:label "SQL injection"@it,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>
+    
+    SubClassOf: 
+        CodeInjection
+    
+    
+Class: UserAgent
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:comment "Lo user agent"@it,
+        rdfs:comment "The user agent"@en,
+        rdfs:label "User agent"@it,
+        rdfs:label "User agent"@en
+    
+    
+Class: Vulnerability
+
+    Annotations: 
+        rdfs:label "Vulnerability"@en,
+        rdfs:comment "A vulnerability associated with a web application."@en,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "Vulnerabilità"@it,
+        rdfs:comment "Una vulnerabilità a cui è soggetta un'applicazione web"@it
+    
+    
+Class: WebApplication
+
+    Annotations: 
+        rdfs:label "Web application"@en,
+        rdfs:comment "Un'applicazione web."@it,
+        rdfs:label "Applicazione web"@it,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:comment "A web application"@en
+    
+    
+Class: WebServer
+
+    Annotations: 
+        rdfs:label "Server web"@it,
+        rdfs:comment "A web server"@en,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:comment "Un web server"@it,
+        rdfs:label "Web server"@en
+    
+    
+Class: XPATHInjection
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "XPATH injection"@en,
+        rdfs:comment "Il tipo di attacco denominato XPATH injection."@it,
+        rdfs:label "XPATH injection"@it,
+        rdfs:comment "The XPATH injection attack."@en
+    
+    SubClassOf: 
+        CodeInjection
+    
+    
+Class: XSS
+
+    Annotations: 
+        rdfs:label "XSS"@en,
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>,
+        rdfs:label "XSS"@it,
+        rdfs:comment "The XSS attack"@en,
+        rdfs:comment "L'attacco XSS."@it
+    
+    SubClassOf: 
+        Attack
+    
+    
+Class: owl:Thing
+
+    
+Individual: GET
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>
+    
+    Types: 
+        Method
+    
+    
+Individual: HEAD
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>
+    
+    Types: 
+        Method
+    
+    
+Individual: POST
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>
+    
+    Types: 
+        Method
+    
+    
+Individual: PUT
+
+    Annotations: 
+        rdfs:isDefinedBy <https://w3id.og/haps/ont>
+    
+    Types: 
+        Method
+    
+    
