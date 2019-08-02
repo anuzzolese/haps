@@ -10,4 +10,4 @@ The proposed approach, which pushes the state of the art of industrial solutions
 
 ## Ontology
 
-The HAPS Ontology models attacks to and vulnerabilities of Web applications. The ontology is available in the [ont folder](https://github.com/anuzzolese/haps/ont).
+The HAPS Ontology models attacks to and vulnerabilities of Web applications. The ontology is available in the [ont folder](https://github.com/anuzzolese/haps/tree/master/ont).
